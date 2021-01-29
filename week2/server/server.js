@@ -2,10 +2,12 @@
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
+const booleanParser = require('express-query-boolean');
 
 // Server Middleware
 app.use(express.json());
 app.use(morgan('dev'));
+app.use(booleanParser());
 
 // Mongoose Middleware
 const mongoose = require('mongoose');

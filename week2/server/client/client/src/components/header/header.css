@@ -1,0 +1,9 @@
+.header { 
+    text-align: right;
+    color: #E53D00;
+    background-color: #13293D !important;
+}
+
+.head-name {
+    padding: 40px;
+}

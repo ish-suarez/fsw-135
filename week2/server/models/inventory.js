@@ -10,6 +10,7 @@ const inventorySchema = new Schema({
     },
     itemType: {
         type: String,
+        enum: ['decore', 'furniture', 'electronics', 'appliance', 'kitchen', 'bedroom', 'office supplies'],
         require: true
     },
     price: {
