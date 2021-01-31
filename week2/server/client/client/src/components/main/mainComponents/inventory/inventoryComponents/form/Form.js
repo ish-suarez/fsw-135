@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 
+import './form.css';
+
 export default function Form(props) {
 
     const initialInputs = {itemName: props.itemName || '' , itemType: props.itemType  || '' , price: props.price || undefined, available: props.available || undefined};
@@ -65,7 +67,7 @@ export default function Form(props) {
                         checked={!inputs.available === true}  
                     />
                 </div>
-                <button>{props.buttonText}</button>
+                <button className='form-button'>{props.buttonText}</button>
         </form>
     );
 }

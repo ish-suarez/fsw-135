@@ -2,7 +2,6 @@
 const express = require('express');
 const inventoryRouter = express.Router();
 const Inventory = require('../models/inventory');
-const {map, find, } = require('lodash');
 
 
 // Get Requests 
@@ -15,6 +14,17 @@ inventoryRouter.get('/', (req, res, next) => {
         res.status(200).send(items);
     });
 });
+
+// Get One By _id
+inventoryRouter.get('/:itemId', (req, res, next) => {
+    Inventory.findById({_id: req.params.itemId}, (err, item) => {
+        if(err) {
+            res.status(500);
+            return next(err);
+        }
+        return res.status(200).send(item);
+    })
+})
 
 // Post Request
 inventoryRouter.post('/', (req, res, next) => {
