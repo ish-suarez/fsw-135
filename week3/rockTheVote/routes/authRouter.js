@@ -25,5 +25,16 @@ const User = require('../models/user');
         User.findOneAndDelete({_id: req.params.userId}, (err, deletedUser) => err ? res.status(500) && next(err) : res.status(200).send(deletedUser));
     })
 
+    // Update User
+    authRouter.put('/:userId', (req, res, next) => {
+        User.findOneAndUpdate(
+            {_id: req.params.userId},
+            req.body, 
+            {new: true},
+            (err, updatedUser) => err ? res.status(500) && next(err) : res.status(201).send(updatedUser)
+        )
+    })
+
+
 
 module.exports = authRouter;
