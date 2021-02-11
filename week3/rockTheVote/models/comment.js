@@ -3,8 +3,19 @@ const Schema = mongoose.Schema;
 
 // Comment Schema
 const commentSchema = new Schema({
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
+    issue: {
+        type: Schema.Types.ObjectId,
+        ref: 'Issue',
+        required: true
+    },
     comment: {
-        type: String
+        type: String,
+        required: true
     },
     likes: {
         type: Number,
@@ -13,10 +24,9 @@ const commentSchema = new Schema({
     replies: [
         { body: String }
     ],
-    user: {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
+    date: {
+        Date,
+        default: Date.now
     }
 })
 

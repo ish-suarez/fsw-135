@@ -3,16 +3,22 @@ const Schema = mongoose.Schema;
 
 // Issue Schema
 const issueSchema = new Schema({
-    code: {
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
+    issue: {
         type: String,
         required: true
     },
-    description: {
-        type: String
+    votes:  {
+        type: Number,
+        required: true
     },
-    completed: {
-        type: Boolean,
-        default: false
+    date: {
+        type: Date,
+        default: Date.now
     }
 })
 
