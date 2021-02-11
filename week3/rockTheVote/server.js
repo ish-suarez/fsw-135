@@ -21,8 +21,9 @@ mongoose.connect(
 
 // Routes
 app.use('/auth', require('./routes/authRouter'));
-app.use('', require('./routes/commentRouter'));
-app.use('', require('./routes/issueRouter'));
+app.use('/user', require('./routes/commentRouter'));
+app.use('/issue', require('./routes/issueRouter'));
+app.use('/comment', require('./routes/commentRouter'));
 
 // Error Handeling 
 app.use((err, req, res, next) => {
