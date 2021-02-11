@@ -19,14 +19,14 @@ const commentSchema = new Schema({
     },
     likes: {
         type: Number,
-        default: null
+        default: 0
     },
     replies: [
         { body: String }
     ],
     date: {
-        Date,
-        default: Date.now
+        type: Date,
+        default: Date.now()
     }
 })
 
