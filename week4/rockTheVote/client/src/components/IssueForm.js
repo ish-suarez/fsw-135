@@ -23,6 +23,7 @@ export default function IssueForm(props){
   }
 
   const { issue } = inputs;
+  
   return (
     <form onSubmit={handleSubmit}>
       <input 

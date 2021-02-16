@@ -37,7 +37,7 @@ issueRouter.put('/like/:issueId', (req, res, next) => {
 
 // Delete Issue
 issueRouter.delete('/:issueId', (req, res, next) => {
-    Issue.findOneAndDelete({_id: req.params.issueId}, (err, deletedIssue) => err ? res.status(500) && next(err) : res.status(200).send(deletedIssue));
+    Issue.findOneAndDelete({_id: req.params.issueId}, (err, deletedIssue) => err ? res.status(500) && next(err) : res.status(200).send(`Deleted ${deletedIssue}`));
 })
 
 // Update Issue

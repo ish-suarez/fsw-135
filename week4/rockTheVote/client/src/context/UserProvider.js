@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import {filter} from '../../node_modules/lodash'
 
 export const UserContext = React.createContext();
 
@@ -18,7 +19,7 @@ export default function UserProvider(props){
     issues: [] 
   }
 
-  const [userState, setUserState] = useState(initState)
+  const [userState, setUserState] = useState(initState);
 
   function signup(credentials){
     axios.post('/auth/signup', credentials)
@@ -60,13 +61,19 @@ export default function UserProvider(props){
   function addIssue(newIssue){
     userAxios.post('/api/issue', newIssue)
       .then(res => {
-        setUserState(prevState => ({...prevState, issues: [...prevState.Issues, res.data]}))
+        setUserState(prevState => ({...prevState, issues: [...prevState.issues, res.data]}))
       })
       .catch(err => console.log(err.response.data.errMsg))
   }
 
+  function deleteIssue(issueId){
+    userAxios.delete(`/api/issue/${issueId}`)
+      .then(res => setUserState(prevState => filter(prevState, issue => issue._id !== issueId)))
+      .catch(err => console.log(err.response.data.errMsg))
+  }
+
   return (
-    <UserContext.Provider value={{...userState, signup, login, logout, addIssue}}>
+    <UserContext.Provider value={{...userState, signup, login, logout, addIssue, deleteIssue}}>
       { props.children }
     </UserContext.Provider>
   )

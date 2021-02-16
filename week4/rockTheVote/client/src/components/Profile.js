@@ -8,7 +8,8 @@ export default function Profile(){
     user: { 
       username 
     }, 
-    addIssue, 
+    addIssue,
+    deleteIssue, 
     issues 
   } = useContext(UserContext);
 
@@ -16,9 +17,9 @@ export default function Profile(){
     <div className="profile">
       <h1>Welcome @{username}!</h1>
       <h3>Add A Issue</h3>
-      <IssueForm addComment={addIssue}/>
+      <IssueForm addIssue={addIssue} />
       <h3>Your Issues</h3>
-      <IssueList issues={issues}/>
+      <IssueList issues={issues} deleteIssue={deleteIssue}/>
     </div>
   )
 }
