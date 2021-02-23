@@ -1,4 +1,5 @@
 import React from 'react';
+import './authForm.css';
 
 export default function AuthForm(props){
     const {
@@ -9,10 +10,10 @@ export default function AuthForm(props){
             username, 
             password
         } 
-} = props;
+    } = props;
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className='login' onSubmit={handleSubmit}>
             <input 
                 type='text' 
                 value={username} 
@@ -26,7 +27,7 @@ export default function AuthForm(props){
                 minLength='8'
                 onChange={handleChange} 
                 placeholder='Password'/>
-            <button>{ btnText }</button>
+            <button className='btn btn-primary btn-block btn-large'>{ btnText }</button>
         </form>
     );
 }
