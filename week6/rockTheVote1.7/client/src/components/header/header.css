@@ -1,0 +1,10 @@
+.header { 
+    text-align: right;
+    color: #FCFFF7;
+    background-color: #EFF9F0 !important;
+}
+
+.head-name {  
+    padding-right: 20px;
+    color: #00120B;
+}

@@ -1,0 +1,24 @@
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 5px;
+    background-color: #DE3C4B;
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.534);
+
+}
+
+.link {
+    text-decoration: none;
+    color: #FCFFF7;
+}
+
+.fa-home {
+    font-size: 25px;
+    margin-right: 5px;
+}
+
+.fa-warehouse {
+    font-size: 25px;
+    margin-right: 5px;
+}
