@@ -1,0 +1,23 @@
+.auth-form {
+    margin-top: 50px;
+    padding-top: 10px;
+}
+
+.signUp-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.signUp-header > h5, h1, h3 {
+    margin-top: 15px;
+}
+
+.member {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-header > h1, h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}

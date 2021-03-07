@@ -1,0 +1,13 @@
+.header { 
+    position: sticky;
+    text-align: right;
+    color: #FCFFF7;
+    background-color: #EFF9F0 !important;
+}
+
+.head-name { 
+    font-family: 'Libre Baskerville', serif;
+    font-size: 20px;
+    padding-right: 20px;
+    color: #00120B;
+}

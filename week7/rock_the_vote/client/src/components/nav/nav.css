@@ -1,0 +1,20 @@
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 5px;
+    background-color: #DE3C4B;
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.534);
+    height: 40px;
+}
+
+.link {
+    text-decoration: none;
+    color: #FCFFF7;
+}
+
+.fa-globe-americas, .fa-user, .fa-sign-out-alt, .fa-sign-in-alt {
+    font-size: 23px;
+    padding-top: 5px;
+    color: #FCFFF7;
+}

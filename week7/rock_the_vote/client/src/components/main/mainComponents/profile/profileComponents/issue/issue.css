@@ -1,0 +1,38 @@
+.cont {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 13px;
+    background-color: #e9e6dc;
+    border-radius: 20px;
+    text-align: center;
+    height: 70px;
+}
+
+.issue {
+    color: #0f2529c5;
+    padding-top: 7px;
+}
+
+.delete-iss {
+    float: right;
+    color: #da2a3ff1; 
+    width: 15px; 
+    height: 20px; 
+    font-size: 15px;
+    background-color: rgba(30, 143, 255, 0.438);
+    border-radius: 100%;
+}
+
+.edit-iss {
+    float: right;
+    width: 20px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.fa-times {
+    font-size: 15px;
+}
+
+.fa-edit {
+    font-size: 15px;
+}
