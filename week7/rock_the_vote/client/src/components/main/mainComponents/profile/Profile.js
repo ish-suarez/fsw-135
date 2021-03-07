@@ -24,14 +24,14 @@ export default function Profile(){
         <div className="profile">
             <Header />
             <div className='prf-head'>
-                <h1>@{username}, welcome.</h1>
+                <h1>@{username}'s Profile</h1>
             </div>
             {toggle ? 
                 <div className='form'>
                     <FontAwesomeIcon icon={faWindowClose} onClick={() => setToggle(prevToggle => !prevToggle)} />
                     <IssueForm submit={addIssue} />
                 </div>
-            
+        
             :
                 <div className='toggle-form'>
                     <p>Add Your Own Voice</p>
@@ -39,7 +39,7 @@ export default function Profile(){
                 </div>
             }
             <div className='list'>
-                <h4 style={{paddingTop: '30px', textAlign: 'right', paddingRight: '12px'}}>Your Issues</h4>
+                <h4 className='cursive' style={{ paddingTop: '30px', textAlign: 'right', paddingRight: '12px'}}>Your Issues</h4>
                 <IssueList issues={issues} />
             </div>
         </div>

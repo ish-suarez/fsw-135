@@ -30,7 +30,7 @@ export default function IssueForm(props){
     const { issue } = inputs;
 
     return (
-        <form className='issue-form' onSubmit={handleSubmit}>
+        <form className='issue-form' >
             <textarea className='issue-input'
                 type="text" 
                 name="issue" 
@@ -38,7 +38,7 @@ export default function IssueForm(props){
                 onChange={handleChange} 
                 placeholder="Your Issue"
             />
-            <button className='btn btn-primary btn-block btn-large'><FontAwesomeIcon icon={faPenFancy} /></button>
+            <p onClick={handleSubmit} className='toggle-btn no-out'><FontAwesomeIcon icon={faPenFancy} /></p>
         </form>
     );
 }

@@ -36,9 +36,9 @@ export default function Auth(){
             { !toggle ?
                 <div className='auth-form'>
                     <div className='signUp-header'>
-                        <h5>You may be wondering... does my vote really count?</h5>
-                        <h1>Sign up for Rock the Vote</h1>
-                        <h3>Where all of our voices matter</h3>
+                        <h5 style={{color: '#235789'}}>You may be wondering... does my vote really count?</h5>
+                        <h1 style={{fontSize: '30px', color: '#C1292E'}}>Sign up for Rock the Vote</h1>
+                        <h3 style={{color: '#020100'}}>Where all of our voices matter</h3>
                     </div>
                     <AuthForm 
                         handleChange={handleChange}
@@ -52,8 +52,8 @@ export default function Auth(){
             :
                 <div className='auth-form'>
                     <div className='login-header'>
-                        <h1>Welcome back!</h1>
-                        <h2>Together we keep the conversation going.</h2>
+                        <h1 style={{color: '#C1292E'}}>Welcome back!</h1>
+                        <h2 style={{color: '#235789'}}>Together we keep the conversation going.</h2>
                     </div>
                     <AuthForm 
                         handleChange={handleChange}

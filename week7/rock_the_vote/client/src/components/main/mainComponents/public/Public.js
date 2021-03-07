@@ -1,12 +1,35 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import axios from 'axios';
+
 import './public.css';
 
-function Home() {
+import PublicIssueList from './publicComponents/publicIssueList/PublicIssueList';
+
+
+export default function Public() {
+    const [issues, setIssues] = useState([])
+
+    const getAllIssues = () => {
+        axios.get(`/issue`)
+            .then(res =>{
+                setIssues(res.data)
+                console.log(res.data)
+            })
+            .catch(err => console.log(err))
+    }
+
+
+
+    useEffect(() => {
+        getAllIssues();
+        console.log(`These are Issues`, issues)
+    }, [])
+
+
     return (
         <div className='home'>
-            <h1 className='welcome'>Rock The Vote</h1>
+            <PublicIssueList issues={issues} />
         </div>
     );
 }
 
-export default Home;

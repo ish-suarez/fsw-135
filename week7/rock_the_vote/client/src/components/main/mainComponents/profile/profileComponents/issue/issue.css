@@ -2,14 +2,17 @@
     font-family: 'Libre Baskerville', serif;
     font-size: 13px;
     background-color: #e9e6dc;
-    border-radius: 20px;
+    border-radius: 13px;
     text-align: center;
-    height: 70px;
+    padding: 15px;
+    height: 66px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 3px; margin-right: 3px;
 }
 
 .issue {
     color: #0f2529c5;
-    padding-top: 7px;
 }
 
 .delete-iss {
@@ -35,4 +38,25 @@
 
 .fa-edit {
     font-size: 15px;
+}
+
+.likes-iss {
+    float: left !important;
+}
+
+.rmg {
+    margin-right: 9px;
+}
+
+.like {
+    color: green;
+}
+
+.edt {
+    text-align: unset;
+    height: unset;
+}
+
+.edt-close {
+    margin-left: 15px;
 }

@@ -3,9 +3,10 @@
     padding-bottom: 40px;
 }
 
-.prf-head > h1, h3 {
-    font-family: 'Martel', serif;
-    font-size: 20px;
+.prf-head {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 7px;
+    color: #69615da9;
 }
 
 .list {
@@ -19,6 +20,8 @@
     padding: 15px 20px;
     font-family: 'Permanent Marker', cursive;
     font-size: 23px;
+    color: #C1292E;
+    text-shadow: 0px 0px 1px #13293dab;
 }
 
 .form { 
@@ -29,6 +32,34 @@
     padding-top: 6px;
     padding-left: 5px;
     margin-bottom: 30px;
+    margin-left: 3px; margin-right: 3px;
+}
+
+.toggle-btn {
+    font-size: 27px;
+    color: dodgerblue;
+    border-radius: 100%;
+    margin-left: 11px;
+    outline: none;
+    box-shadow: 0px 0px 4px  dodgerblue;
+    background-color: #da2a3f44;
+}
+
+.no-out {
+    float: right;
+}
+
+.fa-window-close {
+    position: absolute;
+    font-size: 14px;
+    float: right;
+    color: #A4031F;
+    margin-left: 3px;
     
 }
 
+.cursive {
+    font-family: 'Permanent Marker', cursive;
+    color: #8076719d;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.562);
+}

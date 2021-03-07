@@ -9,7 +9,7 @@ import { UserContext } from '../../../../../../context/UserProvider';
 export default function Issue(props){
     const { issue, upVotes, downVotes, _id } = props;
 
-    const {deleteIssue, editIssue} = useContext(UserContext);
+    const {user: {username}, deleteIssue, editIssue} = useContext(UserContext);
 
     const [editToggle, setEditToggle] = useState(false);
 
@@ -23,13 +23,18 @@ export default function Issue(props){
                     <div className='delete-iss edit-iss'>
                         <FontAwesomeIcon onClick={() => setEditToggle(prevToggle => !prevToggle)}  icon={faEdit} />
                     </div>
+                    <div className='likes-iss'>
+                        <p className='delete-iss rmg like'>{upVotes}<FontAwesomeIcon icon={faThumbsUp} /> </p>
+                        <p className='delete-iss rmg'>{downVotes}<FontAwesomeIcon icon={faThumbsDown} /></p>
+                    </div>
+                    <h4>@{username}</h4>
                     <h1 className='issue'>{ issue }</h1>
                 </div>
             :
-                <>
-                    <FontAwesomeIcon onClick={() => setEditToggle(prevToggle => !prevToggle)}  icon={faTimes} />
+                <div className='edt cont'>
+                    <FontAwesomeIcon className='edt-close' onClick={() => setEditToggle(prevToggle => !prevToggle)}  icon={faTimes} />
                     <IssueForm issue={issue} _id={_id} submit={editIssue} />
-                </>
+                </div>
             }
 
         </>
