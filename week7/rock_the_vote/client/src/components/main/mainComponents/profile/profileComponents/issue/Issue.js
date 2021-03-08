@@ -9,7 +9,7 @@ import { UserContext } from '../../../../../../context/UserProvider';
 export default function Issue(props){
     const { issue, upVotes, downVotes, _id } = props;
 
-    const {user: {username}, deleteIssue, editIssue, addLike} = useContext(UserContext);
+    const {user: {username}, deleteIssue, editIssue, addLike, dislike} = useContext(UserContext);
 
     const [editToggle, setEditToggle] = useState(false);
 
@@ -25,7 +25,7 @@ export default function Issue(props){
                     </div>
                     <div className='likes-iss'>
                         <p className='delete-iss rmg like'>{upVotes}<FontAwesomeIcon onClick={() => addLike(_id)} icon={faThumbsUp} /> </p>
-                        <p className='delete-iss rmg'>{downVotes}<FontAwesomeIcon icon={faThumbsDown} /></p>
+                        <p className='delete-iss rmg'>{downVotes}<FontAwesomeIcon onClick={() => dislike(_id)} icon={faThumbsDown} /></p>
                     </div>
                     <h4>@{username}</h4>
                     <h1 className='issue'>{ issue }</h1>

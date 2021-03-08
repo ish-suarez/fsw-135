@@ -21,4 +21,19 @@ unprotectedIssue.put('/like/:issueId', (req, res, next) => {
     )
 })
 
+unprotectedIssue.put('/dislike/:issueId', (req, res, next) => {
+    Issue.findOneAndUpdate(
+        {_id: req.params.issueId},
+        { $inc: { downVotes: 1  } },
+        {new: true},
+        (err, updateIssue) => {
+        if(err) {
+            res.status(500)
+            return next(err)
+        }
+        return res.status(201).send(updateIssue)
+        }
+    )
+})
+
 module.exports = unprotectedIssue;

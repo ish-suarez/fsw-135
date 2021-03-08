@@ -114,10 +114,18 @@ export default function UserProvider(props){
       .then(err => console.log(err))
   }
 
+  const dislike = (issueId) => {
+    userAxios.put(`/issue/dislike/${issueId}`)
+      .then(res => {
+        setUserState(prevState => ({...prevState}))
+        window.location.reload();
+      })
+      .then(err => console.log(err))
+  }
 
 
   return (
-    <UserContext.Provider value={{...userState, signup, login, logout, addLike, resetAuthErr, getUserIssues, editIssue, addIssue, deleteIssue}}>
+    <UserContext.Provider value={{...userState, signup, login, logout, addLike, dislike, resetAuthErr, getUserIssues, editIssue, addIssue, deleteIssue}}>
       { props.children }
     </UserContext.Provider>
   )
