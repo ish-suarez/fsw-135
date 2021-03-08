@@ -1,13 +1,15 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import axios from 'axios';
+import {UserContext} from '../../../../context/UserProvider';
 
 import './public.css';
 
 import PublicIssueList from './publicComponents/publicIssueList/PublicIssueList';
+import IssueList from './publicComponents/publicIssueList/PublicIssueList';
 
 
 export default function Public() {
-    const [issues, setIssues] = useState([])
+    const [issue, setIssues] = useState([])
 
     const getAllIssues = () => {
         axios.get(`/issue`)
@@ -18,17 +20,15 @@ export default function Public() {
             .catch(err => console.log(err))
     }
 
-
-
     useEffect(() => {
         getAllIssues();
-        console.log(`These are Issues`, issues)
+        console.log(`These are Issues`, issue)
     }, [])
 
 
     return (
         <div className='home'>
-            <PublicIssueList issues={issues} />
+            <PublicIssueList issues={issue} />
         </div>
     );
 }

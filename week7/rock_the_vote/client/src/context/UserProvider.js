@@ -103,10 +103,21 @@ export default function UserProvider(props){
           window.location.reload();
         })
         .catch(err => console.log(err.response.data.errMsg));
-}
+  }
+
+  const addLike = (issueId) => {
+    userAxios.put(`/issue/like/${issueId}`)
+      .then(res => {
+        setUserState(prevState => ({...prevState}))
+        window.location.reload();
+      })
+      .then(err => console.log(err))
+  }
+
+
 
   return (
-    <UserContext.Provider value={{...userState, signup, login, logout, resetAuthErr, getUserIssues, editIssue, addIssue, deleteIssue}}>
+    <UserContext.Provider value={{...userState, signup, login, logout, addLike, resetAuthErr, getUserIssues, editIssue, addIssue, deleteIssue}}>
       { props.children }
     </UserContext.Provider>
   )

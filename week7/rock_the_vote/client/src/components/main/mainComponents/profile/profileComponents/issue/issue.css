@@ -13,6 +13,8 @@
 
 .issue {
     color: #0f2529c5;
+    font-size: 13px;
+    margin-top: 9px;
 }
 
 .delete-iss {
@@ -46,6 +48,7 @@
 
 .rmg {
     margin-right: 9px;
+    font-size: 13px;
 }
 
 .like {

@@ -7,11 +7,11 @@ import './issueList.css';
 export default function IssueList(props){
     const {issues} = props;
 
-    const {editIssue} = useContext(UserContext);
+    const {editIssue, addLike} = useContext(UserContext);
     
     return (
         <div className='issue-list'>
-            {issues.map(issue => <Issue {...issue} submit={editIssue} key={issue._id} />)}
+            {issues.map(issue => <Issue {...issue} addLike={addLike} submit={editIssue} key={issue._id} />)}
         </div>
     );
 }
