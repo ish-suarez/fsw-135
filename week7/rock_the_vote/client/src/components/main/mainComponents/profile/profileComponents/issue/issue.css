@@ -4,7 +4,7 @@
     background-color: #e9e6dc;
     border-radius: 13px;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     height: 45px;
     margin-top: 6px;
     margin-bottom: 6px;
@@ -13,7 +13,7 @@
 
 .issue {
     color: #0f2529c5;
-    font-size: 13px;
+    font-size: 15px;
     margin-top: 9px;
 }
 
@@ -22,8 +22,7 @@
     color: #da2a3ff1; 
     width: 15px; 
     height: 20px; 
-    font-size: 15px;
-    background-color: rgba(30, 143, 255, 0.438);
+    font-size: 13px;
     border-radius: 100%;
 }
 
@@ -35,11 +34,11 @@
 }
 
 .fa-times {
-    font-size: 15px;
+    font-size: 19px;
 }
 
 .fa-edit {
-    font-size: 15px;
+    font-size: 19px;
 }
 
 .likes-iss {
@@ -47,8 +46,8 @@
 }
 
 .rmg {
-    margin-right: 9px;
-    font-size: 13px;
+    margin-right: 18px;
+    font-size: 17px;
 }
 
 .like {

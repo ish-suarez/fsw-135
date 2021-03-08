@@ -26,3 +26,7 @@ textarea {
     border: none;
     resize: none;
 }
+
+no-out {
+    height: fit-content;
+}

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faThumbsUp, faThumbsDown, faTrashAlt, faTimes, faEdit} from '@fortawesome/free-solid-svg-icons'
+import {faThumbsUp, faThumbsDown, faTimes, faEdit} from '@fortawesome/free-solid-svg-icons'
 
 import './issue.css';
 import IssueForm from '../issueForm/IssueForm';
@@ -27,11 +27,11 @@ export default function Issue(props){
                         <p className='delete-iss rmg like'>{upVotes}<FontAwesomeIcon onClick={() => addLike(_id)} icon={faThumbsUp} /> </p>
                         <p className='delete-iss rmg'>{downVotes}<FontAwesomeIcon onClick={() => dislike(_id)} icon={faThumbsDown} /></p>
                     </div>
-                    <h4>@{username}</h4>
+                    <h4 style={{fontStyle: '8px'}}>@{username}</h4>
                     <h1 className='issue'>{ issue }</h1>
                 </div>
             :
-                <div className='edt cont'>
+                <div className='cont edt'>
                     <FontAwesomeIcon className='edt-close' onClick={() => setEditToggle(prevToggle => !prevToggle)}  icon={faTimes} />
                     <IssueForm issue={issue} _id={_id} submit={editIssue} />
                 </div>

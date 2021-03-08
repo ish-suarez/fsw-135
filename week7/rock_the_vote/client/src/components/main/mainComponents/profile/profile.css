@@ -22,6 +22,7 @@
     font-size: 23px;
     color: #C1292E;
     text-shadow: 0px 0px 1px #13293dab;
+    height: fit-content;
 }
 
 .form { 
@@ -40,7 +41,7 @@
     color: dodgerblue;
     border-radius: 100%;
     margin-left: 11px;
-    outline: none;
+    height: fit-content;
     box-shadow: 0px 0px 4px  dodgerblue;
     background-color: #da2a3f44;
 }
@@ -51,7 +52,7 @@
 
 .fa-window-close {
     position: absolute;
-    font-size: 14px;
+    font-size: 15px;
     float: right;
     color: #A4031F;
     margin-left: 3px;

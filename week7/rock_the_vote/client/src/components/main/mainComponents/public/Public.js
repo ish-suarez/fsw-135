@@ -1,11 +1,9 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import {UserContext} from '../../../../context/UserProvider';
+import PublicIssueList from './publicComponents/publicIssueList/PublicIssueList';
 
 import './public.css';
 
-import PublicIssueList from './publicComponents/publicIssueList/PublicIssueList';
-import IssueList from './publicComponents/publicIssueList/PublicIssueList';
 
 
 export default function Public() {
@@ -23,7 +21,7 @@ export default function Public() {
     useEffect(() => {
         getAllIssues();
         console.log(`These are Issues`, issue)
-    }, [])
+    }, [issue])
 
 
     return (

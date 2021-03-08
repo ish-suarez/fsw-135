@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react'
+import React, {useContext, useState} from 'react'
 import IssueForm from './profileComponents/issueForm/IssueForm';
 import IssueList from './profileComponents/issueList/IssueList';
 import { UserContext } from '../../../../context/UserProvider';
